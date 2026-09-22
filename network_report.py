@@ -137,3 +137,11 @@ print()
 print("FLAG - These devices need attention:")
 for device in find_attention(devices):
     print(f" {device['hostname']}")
+
+#add a commit
+operational_count = 0
+for device in devices:
+    if device["status"]=="operational":
+        operational_count +=1
+print()
+print("Operational devices: ", operational_count)
