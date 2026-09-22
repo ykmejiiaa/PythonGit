@@ -145,3 +145,11 @@ for device in devices:
         operational_count +=1
 print()
 print("Operational devices: ", operational_count)
+
+#failed backup count
+failed_count=0
+for device in devices:
+    if device["backup_status"]=="failed":
+        failed_count +=1
+print()
+print("Devices with failed backups: ", failed_count)
