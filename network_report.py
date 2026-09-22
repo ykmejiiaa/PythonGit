@@ -153,3 +153,11 @@ for device in devices:
         failed_count +=1
 print()
 print("Devices with failed backups: ", failed_count)
+
+#test branch
+high_cpu = 0
+for device in devices:
+    if device["cpu_usage"] >= 80:
+        high_cpu +=1
+print()
+print("Devices with high CPU usage:", high_cpu)
